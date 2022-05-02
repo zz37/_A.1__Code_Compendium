@@ -1,0 +1,850 @@
+Log into lxplus
+
+
+
+Geant4 setup: 
+
+source /cvmfs/sft.cern.ch/lcg/contrib/gcc/6.3.0/x86_64-slc6/setup.sh
+source /cvmfs/geant4.cern.ch/geant4/10.5/x86_64-slc6-gcc63-opt-MT/CMake-setup.sh
+
+
+Check that ROOT version and cmake to be: 
+ 
+root version  6.06/08 
+and cmake  2.8.12.2 
+
+
+Clone the repository 
+
+git clone https://gitlab.cern.ch/gasteam/gem-simulation
+
+
+Go inside the directory gem-simulation
+
+Building is done by (inside gem-simulation):
+mkdir build
+cd build 
+cmake ..
+make
+
+Check that the executable is produced  (gem.exe) then try to run it  by
+
+Run with default parameters: ./gem.exe init.mac (copy init.mac and gun.mac to /build from one directory above )
+
+See if you have similar output then below
+
+=============================================================
+
+
+Keyboard-interactive authentication prompts from server:
+End of keyboard-interactive prompts from server
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v21.3 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ➤ SSH session to castaned@lxplus.cern.ch                             │
+    │   • Direct SSH      :  ✔                                             │
+    │   • SSH compression :  ✔                                             │
+    │   • SSH-browser     :  ✔                                             │
+    │   • X11-forwarding  :  ✔  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ➤ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Last login: Wed Jan 26 18:08:10 2022 from 148.225.80.90
+* ********************************************************************
+* Welcome to lxplus748.cern.ch, CentOS Linux release 7.9.2009 (Core)
+* Archive of news is available in /etc/motd-archive
+* Reminder: you have agreed to the CERN
+*   computing rules, in particular OC5. CERN implements
+*   the measures necessary to ensure compliance.
+*   https://cern.ch/ComputingRules
+* Puppet environment: production, Roger state: production
+* Foreman hostgroup: lxplus/nodes/login
+* Availability zone: cern-geneva-a
+* LXPLUS Public Login Service - http://lxplusdoc.web.cern.ch/
+* A CS8 based lxplus8.cern.ch is now available
+* Please read LXPLUS Privacy Notice in http://cern.ch/go/TpV7
+* ********************************************************************
+        castaned@lxplus748:~$
+castaned@lxplus748:~$
+castaned@lxplus748:~$
+castaned@lxplus748:~$
+castaned@lxplus748:~$
+castaned@lxplus748:~$
+castaned@lxplus748:~$ source /cvmfs/geant4.cern.ch/geant4/10.5/x86_64-slc6-gcc63-opt-MT/CMake-setup.sh
+It looks like your compiler settings are not suitable
+The Operating system is expected to be x86_64-slc6-gcc63
+The compiler version should be g++ (GCC) 6.3.0
+The system reports that it is  g++ (GCC) 4.8.5 20150623 (Red Hat 4.8.5-44)
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Please set your PATH and LD_LIBRARY_PATH environment variables
+You may use the setup script
+source /cvmfs/sft.cern.ch/lcg/contrib/gcc/6.3.0/x86_64-slc6/setup.sh
+  to set your environment for this compiler
+castaned@lxplus748:~$ source /cvmfs/sft.cern.ch/lcg/contrib/gcc/6.3.0/x86_64-slc6/setup.sh
+castaned@lxplus748:~$ source /cvmfs/geant4.cern.ch/geant4/10.5/x86_64-slc6-gcc63-opt-MT/CMake-setup.sh
+Setting up the environment for Geant4 10.5 for use with CMake
+castaned@lxplus748:~$
+castaned@lxplus748:~$
+castaned@lxplus748:~$
+castaned@lxplus748:~$ ls
+auto_generated.bib             DN-17-005                  DN-20-035_temp.tex   fluxvsetaBRIL         MG_ME_V4.
+auto_generated.bst             DN-20-035_temp.aux         Documents            for_alfredo           Music
+briltdr                        DN-20-035_temp.bbl         Downloads            forAlfredo            myCertifi
+CMSSW_10_3_1                   DN-20-035_temp.blg         etc                  hadrontherapy         NoiseRate
+CMSSW_8_0_28                   DN-20-035_temp.err         FisicaComputacional  HiggsExample20112012  Occupancy
+config.mk                      DN-20-035_temp.log         fluka_condor         histo_occupancy.root  Occupancy
+CVESP                          DN-20-035_temp.out         FLUKA_DATA_V372      iml_keras_workshop    opendata
+Desktop                        DN-20-035_temp.pdf         flukafiles           lxbatch-2.x           oradiag_c
+DisplacedMuonJetAnalysis_2015  DN-20-035_temp.pdftex_out  FLUKA_V3000          makefile              output_1_
+castaned@lxplus748:~$ cd /afs/cern.ch/work/c/castaned/
+castaned@lxplus748:/afs/cern.ch/work/c/castaned$ ls
+AN-19-153            CMSSW_10_4_0       CMSSW_8_0_28                   DN-20-035_temp.bbl  DN-20-035_temp.pdf
+auto_generated.bib   CMSSW_10_6_18      CMSSW_9_0_0                    DN-20-035_temp.blg  DN-20-035_temp.pdft
+auto_generated.bst   CMSSW_11_0_0_pre7  DisplacedMuonJetAnalysis_2016  DN-20-035_temp.err  DN-20-035_temp.tex
+bril_lxbatch-master  CMSSW_11_0_1       DN-20-035                      DN-20-035_temp.log  fluka2011-3.0
+CMSSW_10_2_18        CMSSW_8_0_25       DN-20-035_temp.aux             DN-20-035_temp.out  fluka_2011.tgz
+castaned@lxplus748:/afs/cern.ch/work/c/castaned$ cd gem-simulation/
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation$ rm -rf build/
+mkdir builcastaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation$ mkdir build
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation$ cd build/
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ ls
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ root -b
+
+
+   -------------------------------------------------------------------------
+  | Welcome to ROOT 6.06/08                             http://root.cern.ch |
+  |                                            (c) 1995-2016, The ROOT Team |
+  | Built for linuxx8664gcc                                                 |
+  | From heads/v6-06-00-patches@v6-06-06-30-g3bae07b, Sep 01 2016, 14:28:05 |
+  | Try '.help', '.demo', '.license', '.credits', '.quit'/'.q'              |
+   -------------------------------------------------------------------------
+
+root [0]
+root [0]
+root [0] .q
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cmake
+cmake version 2.8.12.2
+Usage
+
+  cmake [options] <path-to-source>
+  cmake [options] <path-to-existing-build>
+
+Options
+  -C <initial-cache>          = Pre-load a script to populate the cache.
+  -D <var>:<type>=<value>     = Create a cmake cache entry.
+  -U <globbing_expr>          = Remove matching entries from CMake cache.
+  -G <generator-name>         = Specify a build system generator.
+  -T <toolset-name>           = Specify toolset name if supported by
+                                generator.
+  -Wno-dev                    = Suppress developer warnings.
+  -Wdev                       = Enable developer warnings.
+  -E                          = CMake command mode.
+  -i                          = Run in wizard mode.
+  -L[A][H]                    = List non-advanced cached variables.
+  --build <dir>               = Build a CMake-generated project binary tree.
+  -N                          = View mode only.
+  -P <file>                   = Process script mode.
+  --find-package              = Run in pkg-config like mode.
+  --graphviz=[file]           = Generate graphviz of dependencies, see
+                                CMakeGraphVizOptions.cmake for more.
+  --system-information [file] = Dump information about this system.
+  --debug-trycompile          = Do not delete the try_compile build tree.
+                                Only useful on one try_compile at a time.
+  --debug-output              = Put cmake in a debug mode.
+  --trace                     = Put cmake in trace mode.
+  --warn-uninitialized        = Warn about uninitialized values.
+  --warn-unused-vars          = Warn about unused variables.
+  --no-warn-unused-cli        = Don't warn about command line options.
+  --check-system-vars         = Find problems with variable usage in system
+                                files.
+  --help-command cmd [file]   = Print help for a single command and exit.
+  --help-command-list [file]  = List available listfile commands and exit.
+  --help-commands [file]      = Print help for all commands and exit.
+  --help-compatcommands [file]= Print help for compatibility commands.
+  --help-module module [file] = Print help for a single module and exit.
+  --help-module-list [file]   = List available modules and exit.
+  --help-modules [file]       = Print help for all modules and exit.
+  --help-custom-modules [file]= Print help for all custom modules and exit.
+  --help-policy cmp [file]    = Print help for a single policy and exit.
+  --help-policies [file]      = Print help for all policies and exit.
+  --help-property prop [file] = Print help for a single property and exit.
+  --help-property-list [file] = List available properties and exit.
+  --help-properties [file]    = Print help for all properties and exit.
+  --help-variable var [file]  = Print help for a single variable and exit.
+  --help-variable-list [file] = List documented variables and exit.
+  --help-variables [file]     = Print help for all variables and exit.
+  --copyright [file]          = Print the CMake copyright and exit.
+  --help,-help,-usage,-h,-H,/?= Print usage information and exit.
+  --help-full [file]          = Print full help and exit.
+  --help-html [file]          = Print full help in HTML format.
+  --help-man [file]           = Print full help as a UNIX man page and exit.
+  --version,-version,/V [file]= Show program name/version banner and exit.
+
+Generators
+
+The following generators are available on this platform:
+  Unix Makefiles              = Generates standard UNIX makefiles.
+  Ninja                       = Generates build.ninja files (experimental).
+  CodeBlocks - Ninja          = Generates CodeBlocks project files.
+  CodeBlocks - Unix Makefiles = Generates CodeBlocks project files.
+  Eclipse CDT4 - Ninja        = Generates Eclipse CDT 4.0 project files.
+  Eclipse CDT4 - Unix Makefiles
+                              = Generates Eclipse CDT 4.0 project files.
+  KDevelop3                   = Generates KDevelop 3 project files.
+  KDevelop3 - Unix Makefiles  = Generates KDevelop 3 project files.
+  Sublime Text 2 - Ninja      = Generates Sublime Text 2 project files.
+  Sublime Text 2 - Unix Makefiles
+                              = Generates Sublime Text 2 project files.
+
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cmake --v
+CMake Error: The source directory "/afs/cern.ch/work/c/castaned/gem-simulation/build/--v" does not exist.
+Specify --help for usage, or press the help button on the CMake GUI.
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cmake --version
+cmake version 2.8.12.2
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cmake ..
+-- The C compiler identification is GNU 6.3.0
+-- The CXX compiler identification is GNU 6.3.0
+-- Check for working C compiler: /cvmfs/sft.cern.ch/lcg/contrib/gcc/6.3.0/x86_64-slc6/bin/gcc
+-- Check for working C compiler: /cvmfs/sft.cern.ch/lcg/contrib/gcc/6.3.0/x86_64-slc6/bin/gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /cvmfs/sft.cern.ch/lcg/contrib/gcc/6.3.0/x86_64-slc6/bin/g++
+-- Check for working CXX compiler: /cvmfs/sft.cern.ch/lcg/contrib/gcc/6.3.0/x86_64-slc6/bin/g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /afs/cern.ch/work/c/castaned/gem-simulation/build
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ make
+Scanning dependencies of target gem.exe
+[ 14%] Building CXX object CMakeFiles/gem.exe.dir/gem.cc.o
+[ 28%] Building CXX object CMakeFiles/gem.exe.dir/src/Detector.cc.o
+[ 42%] Building CXX object CMakeFiles/gem.exe.dir/src/EventAction.cc.o
+[ 57%] Building CXX object CMakeFiles/gem.exe.dir/src/Geometry.cc.o
+[ 71%] Building CXX object CMakeFiles/gem.exe.dir/src/PhysicsList.cc.o
+[ 85%] Building CXX object CMakeFiles/gem.exe.dir/src/PrimaryGeneratorAction.cc.o
+[100%] Building CXX object CMakeFiles/gem.exe.dir/src/RootWriter.cc.o
+Linking CXX executable gem.exe
+[100%] Built target gem.exe
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ ls
+CMakeCache.txt  CMakeFiles  cmake_install.cmake  gem.exe  init_vis.mac  Makefile  run.mac  vis.mac
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cp ../init.mac ,
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cp ../init.mac .
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ rm ,
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cp ../gun.mac .
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ ./gem.exe init.mac
+
+**************************************************************
+ Geant4 version Name: geant4-10-05-ref-00 [MT]   (7-December-2018)
+                       Copyright : Geant4 Collaboration
+                      References : NIM A 506 (2003), 250-303
+                                 : IEEE-TNS 53 (2006), 270-278
+                                 : NIM A 835 (2016), 186-225
+                             WWW : http://geant4.org/
+**************************************************************
+
+G4VModularPhysicsList::RegisterPhysics: a physics with given type already exists
+ Type = 2 :   existing physics is G4EmLivermore
+G4EmPenelope can not be registered
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : Run0202
+      issued by : G4VModularPhysicsList::RegisterPhysics
+Duplicate type for G4EmPenelope
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+G4VModularPhysicsList::RegisterPhysics: a physics with given type already exists
+ Type = 2 :   existing physics is G4EmLivermore
+G4EmLowEPPhysics can not be registered
+
+-------- WWWW ------- G4Exception-START -------- WWWW -------
+*** G4Exception : Run0202
+      issued by : G4VModularPhysicsList::RegisterPhysics
+Duplicate type for G4EmLowEPPhysics
+*** This is just a warning message. ***
+-------- WWWW -------- G4Exception-END --------- WWWW -------
+
+Unknown material: vacuum
+==========================Fractions============================
+Ar -> 1
+C -> 0
+O -> 0
+Checking overlaps for volume gas ... OK!
+Checking overlaps for volume kapton ... OK!
+Checking overlaps for volume copper ... OK!
+Checking overlaps for volume aluminium ... OK!
+Checking overlaps for volume air ... OK!
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+OpenGLImmediateQt (OGLIQt, OGLI)
+OpenGLStoredQt (OGLSQt, OGL, OGLS)
+OpenGLImmediateXm (OGLIXm, OGLIQt_FALLBACK)
+OpenGLStoredXm (OGLSXm, OGLSQt_FALLBACK)
+OpenGLImmediateX (OGLIX, OGLIQt_FALLBACK, OGLIXm_FALLBACK)
+OpenGLStoredX (OGLSX, OGLSQt_FALLBACK, OGLSXm_FALLBACK)
+RayTracerX (RayTracerX)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByAttribute
+  drawByCharge
+  drawByOriginVolume
+  drawByParticleID
+  drawByEncounteredVolume
+
+Registered filter factories:
+  attributeFilter
+  chargeFilter
+  originVolumeFilter
+  particleFilter
+  encounteredVolumeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+"/vis/list" to see available colours.
+
+### ===  Deexcitation model UAtomDeexcitation is activated for 1 region:
+          DefaultRegionForTheWorld  1  1  1
+
+### === G4UAtomicDeexcitation::InitialiseForNewRun()
+### ===  Auger cascade flag: 1
+### ===  Ignore cuts flag:   0
+### ===  PIXE model for hadrons: Empirical
+### ===  PIXE model for e+-:     Livermore
+
+phot:   for  gamma    SubType= 12  BuildTable= 0
+      LambdaPrime table from 200 keV to 100 TeV in 174 bins
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+ LivermorePhElectric :  Emin=        0 eV    Emax=      100 TeV   AngularGenSauterGavrila  FluoActive
+
+compt:   for  gamma    SubType= 13  BuildTable= 1
+      Lambda table from 100 eV  to 1 MeV, 20 bins per decade, spline: 1
+      LambdaPrime table from 1 MeV to 100 TeV in 160 bins
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+    LivermoreCompton :  Emin=        0 eV    Emax=        1 GeV  FluoActive
+        KleinNishina :  Emin=        1 GeV   Emax=      100 TeV  FluoActive
+
+conv:   for  gamma    SubType= 14  BuildTable= 1
+      Lambda table from 1.022 MeV to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+      BetheHeitler5D :  Emin=        0 eV    Emax=        1 GeV   AngularGenUrban
+     BetheHeitlerLPM :  Emin=        1 GeV   Emax=      100 TeV   AngularGenUrban
+
+Rayl:   for  gamma    SubType= 11  BuildTable= 1
+      Lambda table from 100 eV  to 100 keV, 20 bins per decade, spline: 0
+      LambdaPrime table from 100 keV to 100 TeV in 180 bins
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   LivermoreRayleigh :  Emin=        0 eV    Emax=      100 TeV   CullenGenerator
+
+msc:   for e-    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  GoudsmitSaunderson :  Emin=        0 eV    Emax=      100 MeV  Table with 120 bins Emin=    100 eV    Emax=
+        WentzelVIUni :  Emin=      100 MeV   Emax=      100 TeV  Table with 120 bins Emin=    100 MeV   Emax=
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       LowEnergyIoni :  Emin=        0 eV    Emax=      100 keV   deltaVI
+        MollerBhabha :  Emin=      100 keV   Emax=      100 TeV   deltaVI
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   AngularGen2BS
+            eBremLPM :  Emin=        1 GeV   Emax=      100 TeV   AngularGen2BS
+
+ePairProd:   for  e-    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 25x1001; from 0.1 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           ePairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  e-, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100 MeV to 100 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=      100 MeV   Emax=      100 TeV
+
+msc:   for e+    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  GoudsmitSaunderson :  Emin=        0 eV    Emax=      100 MeV  Table with 120 bins Emin=    100 eV    Emax=
+        WentzelVIUni :  Emin=      100 MeV   Emax=      100 TeV  Table with 120 bins Emin=    100 MeV   Emax=
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=      100 TeV   deltaVI
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  VertexHighEnergyTh(GeV)= 100000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   AngularGen2BS
+            eBremLPM :  Emin=        1 GeV   Emax=      100 TeV   AngularGen2BS
+
+ePairProd:   for  e+    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 25x1001; from 0.1 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           ePairProd :  Emin=        0 eV    Emax=      100 TeV
+
+annihil:   for  e+, integral: 1     SubType= 5  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  e+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100 MeV to 100 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=      100 MeV   Emax=      100 TeV
+
+msc:   for proton    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV   deltaVI
+          BetheBloch :  Emin=        2 MeV   Emax=      100 TeV   deltaVI
+
+hBrems:   for  proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  proton, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 100 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=      100 TeV
+
+nuclearStopping:   for  proton    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin=        0 eV    Emax=        1 MeV
+
+msc:   for GenericIon    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=      100 TeV
+
+ionIoni:   for  GenericIon    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.001, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+         ParamICRU73 :  Emin=        0 eV    Emax=      100 TeV   deltaVI
+
+nuclearStopping:   for  GenericIon    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin=        0 eV    Emax=        1 MeV
+
+msc:   for alpha    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+ionIoni:   for  alpha    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin=        0 eV    Emax=   7.9452 MeV   deltaVI
+          BetheBloch :  Emin=   7.9452 MeV   Emax=      100 TeV   deltaVI
+
+nuclearStopping:   for  alpha    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin=        0 eV    Emax=        1 MeV
+
+msc:   for anti_proton    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=        2 MeV   deltaVI
+          BetheBloch :  Emin=        2 MeV   Emax=      100 TeV   deltaVI
+
+hBrems:   for  anti_proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  anti_proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 17x1001; from 7.50618 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  anti_proton, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 100 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=      100 TeV
+
+nuclearStopping:   for  anti_proton    SubType= 8  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+   ICRU49NucStopping :  Emin=        0 eV    Emax=        1 MeV
+
+msc:   for kaon+    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  1.05231 MeV   deltaVI
+          BetheBloch :  Emin=  1.05231 MeV   Emax=      100 TeV   deltaVI
+
+hBrems:   for  kaon+    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  kaon+    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  kaon+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 100 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for kaon-    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  1.05231 MeV   deltaVI
+          BetheBloch :  Emin=  1.05231 MeV   Emax=      100 TeV   deltaVI
+
+hBrems:   for  kaon-    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  kaon-    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 18x1001; from 3.94942 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  kaon-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of kaon+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for mu+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=      200 keV   deltaVI
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV   deltaVI
+        MuBetheBloch :  Emin=        1 GeV   Emax=      100 TeV
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=      100 TeV
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 21x1001; from 1 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  mu+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 100 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for mu-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 1, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=      200 keV   deltaVI
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV   deltaVI
+        MuBetheBloch :  Emin=        1 GeV   Emax=      100 TeV
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=      100 TeV
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 21x1001; from 1 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  mu-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of mu+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for pi+    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  297.505 keV   deltaVI
+          BetheBloch :  Emin=  297.505 keV   Emax=      100 TeV   deltaVI
+
+hBrems:   for  pi+    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  pi+    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  pi+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 100 TeV, 20 bins per decade, spline: 1
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=      100 TeV
+
+msc:   for pi-    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=      100 TeV  Table with 240 bins Emin=    100 eV    Emax=
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      finalRange(mm)= 0.05, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  297.505 keV   deltaVI
+          BetheBloch :  Emin=  297.505 keV   Emax=      100 TeV   deltaVI
+
+hBrems:   for  pi-    SubType= 3
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=      100 TeV
+
+hPairProd:   for  pi-    SubType= 4
+      dE/dx and range tables from 100 eV  to 100 TeV in 240 bins
+      Lambda tables from threshold to 100 TeV, 20 bins per decade, spline: 1
+      Sampling table 20x1001; from 1.11656 GeV to 100 TeV
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=      100 TeV
+
+CoulombScat:   for  pi-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of pi+
+      ThetaMin(p) < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=      100 TeV
+
+---> Begin of event: 0
+
+---> Begin of event: 500
+
+---> Begin of event: 1000
+
+---> Begin of event: 1500
+
+---> Begin of event: 2000
+
+---> Begin of event: 2500
+
+---> Begin of event: 3000
+
+---> Begin of event: 3500
+
+---> Begin of event: 4000
+
+---> Begin of event: 4500
+
+---> Begin of event: 5000
+
+---> Begin of event: 5500
+
+---> Begin of event: 6000
+
+---> Begin of event: 6500
+
+---> Begin of event: 7000
+
+---> Begin of event: 7500
+
+---> Begin of event: 8000
+
+---> Begin of event: 8500
+
+---> Begin of event: 9000
+
+---> Begin of event: 9500
+Graphics systems deleted.
+Visualization Manager deleting...
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ ls -ltrh
+total 1.5M
+-rw-r--r--. 1 castaned zh 3.8K Jan 28 20:12 vis.mac
+-rw-r--r--. 1 castaned zh   35 Jan 28 20:12 run.mac
+-rw-r--r--. 1 castaned zh  247 Jan 28 20:12 init_vis.mac
+-rw-r--r--. 1 castaned zh  20K Jan 28 20:12 CMakeCache.txt
+-rw-r--r--. 1 castaned zh  12K Jan 28 20:12 Makefile
+-rw-r--r--. 1 castaned zh 2.6K Jan 28 20:12 cmake_install.cmake
+-rwxr-xr-x. 1 castaned zh 1.3M Jan 28 20:13 gem.exe
+drwxr-xr-x. 6 castaned zh 2.0K Jan 28 20:13 CMakeFiles
+-rw-r--r--. 1 castaned zh  182 Jan 28 20:14 init.mac
+-rw-r--r--. 1 castaned zh  237 Jan 28 20:14 gun.mac
+-rw-r--r--. 1 castaned zh 145K Jan 28 20:14 gem_res.root
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cmake --version
+cmake version 2.8.12.2
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ gcc --version
+gcc (GCC) 6.3.0
+Copyright (C) 2016 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ ls -ltrh
+total 1.5M
+-rw-r--r--. 1 castaned zh 3.8K Jan 28 20:12 vis.mac
+-rw-r--r--. 1 castaned zh   35 Jan 28 20:12 run.mac
+-rw-r--r--. 1 castaned zh  247 Jan 28 20:12 init_vis.mac
+-rw-r--r--. 1 castaned zh  20K Jan 28 20:12 CMakeCache.txt
+-rw-r--r--. 1 castaned zh  12K Jan 28 20:12 Makefile
+-rw-r--r--. 1 castaned zh 2.6K Jan 28 20:12 cmake_install.cmake
+-rwxr-xr-x. 1 castaned zh 1.3M Jan 28 20:13 gem.exe
+drwxr-xr-x. 6 castaned zh 2.0K Jan 28 20:13 CMakeFiles
+-rw-r--r--. 1 castaned zh  182 Jan 28 20:14 init.mac
+-rw-r--r--. 1 castaned zh  237 Jan 28 20:14 gun.mac
+-rw-r--r--. 1 castaned zh 145K Jan 28 20:14 gem_res.root
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cp gem_res.root /eos/user/c/ca          staned/
+Display all 106 possibilities? (y or n)
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cp gem_res.root /eos/user/c/ca          staned/
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ ls
+CMakeCache.txt  cmake_install.cmake  gem_res.root  init.mac      Makefile  vis.mac
+CMakeFiles      gem.exe              gun.mac       init_vis.mac  run.mac
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/build$ cd ..
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation$ ls
+build           cs137.mac  gem.cc   include   init_vis.mac  run.mac  tree_analysis.cxx
+CMakeLists.txt  garfield   gun.mac  init.mac  README.md     src      vis.mac
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation$ cd garfield/
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/garfield$ ls
+ELIST.lis      gem.C         IonMobility_Ar+_Ar.txt  NLIST.lis   tree_analysis.cxx
+garfield.root  gem_res.root  makefile                par.txt
+gem            hole_z.cxx    MPLIST.lis              PRNSOL.lis
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/garfield$ grep z_end *
+Binary file gem matches
+gem.C:  Double_t z_end;
+gem.C:  t->SetBranchAddress("z_end", &z_end);
+Binary file gem_res.root matches
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/garfield$ ls
+ELIST.lis      gem.C         IonMobility_Ar+_Ar.txt  NLIST.lis   tree_analysis.cxx
+garfield.root  gem_res.root  makefile                par.txt
+gem            hole_z.cxx    MPLIST.lis              PRNSOL.lis
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/garfield$ emacs -nw gem.C
+castaned@lxplus748:/afs/cern.ch/work/c/castaned/gem-simulation/garfield$
+
+
+
+
+
+
