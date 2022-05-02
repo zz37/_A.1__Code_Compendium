@@ -9,7 +9,7 @@
 # Index folder information
 ---
 
-## Price Data Demo
+## Crypto Demo Pricing
 * Cryptocurrency data demo. File Ethereum classic / USD price data demo.
 * Prices retrieved from yahoo finance website, using the API. 
 ---
@@ -18,7 +18,7 @@
 * Content related to docker code projects.
 ---
 
-## Gean4_Ejemplos_ESP <Repository Name>
+## Geant4_Ejemplos_ESP <Repository Name>
 
 ## Licencia
 ![Licencia Apache, versión 2.0](https://img.shields.io/hexpm/l/plug?color=yellow&label=License&style=flat-square)
@@ -62,8 +62,17 @@ Deppendieno del ejemplo, el main puede invocar a varios archivos macro(*.mac), c
 
 ### Requisitos
 ![Versión](https://img.shields.io/badge/C++11-Solutions-blue.svg?style=flat&logo=c%2B%2B) <Version>
-
 ---
+## Material PDF Geant4 <Repository Name>
+# Material-PDF-Geant4
+Material de Documentación para GEANT4, PDF.
+
+# Autores
+* El material que se encuentra en el repositorio, es una recopilación de la documentación en formato PDF para Geant4.
+* Los derechos de autor y propiedad intelectual es de las personas mismas.
+* Este reopsitorio es sólo de forma educativa.
+* No pretende la distribución ni reclamación de autoría.
+
 
 ## Métodos Numéricos expediente
 * Contiene las metodologías de métodos numéricos y proyecto de rpc.
