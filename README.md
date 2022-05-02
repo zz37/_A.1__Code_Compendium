@@ -64,11 +64,12 @@ Deppendieno del ejemplo, el main puede invocar a varios archivos macro(*.mac), c
 ## Material PDF Geant4 <Repository Name>
 Material de Documentación para GEANT4, PDF.
 
-# Autores
+### Autores
 * El material que se encuentra en el repositorio, es una recopilación de la documentación en formato PDF para Geant4.
 * Los derechos de autor y propiedad intelectual es de las personas mismas.
 * Este reopsitorio es sólo de forma educativa.
 * No pretende la distribución ni reclamación de autoría.
+---
 
 ## Métodos Numéricos expediente
 * Contiene las metodologías de métodos numéricos y proyecto de rpc.
