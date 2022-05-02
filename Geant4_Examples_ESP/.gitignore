@@ -1,0 +1,54 @@
+# archivo de gitignore para que no rastree archivos.
+
+# carpetas a ignorar
+build/*
+
+# ignorar todos los .DS_Store
+*.DS_Store
+.DS_Store
+._.DS_Store
+# ignorar .DS_Store en los sub folders
+src/.DS_Store
+**/.DS_Store
+**/._.DS_Store 
+
+# Prerrequisitos para C++
+*.d
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+# Precompiled Headers
+*.gch
+*.pch
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+# Fortran module files
+*.mod
+*.smod
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+# Executables
+*.exe
+*.out
+*.app
+
+# para Cmake
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles
+CMakeScripts
+Testing
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+CTestTestfile.cmake
+_deps
+
