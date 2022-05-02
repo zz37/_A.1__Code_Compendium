@@ -3,11 +3,10 @@
 * Contents are subject to authorship. Contents can be used for recreational and hobby purposes. Based on the following license.
 * Contents can be either in spanish or english.
 
-## License
+### License
 ![Apache License, Version 2.0](https://img.shields.io/hexpm/l/plug?color=orange&label=License&style=flat-square)
 
-# Index folder information
----
+## Index folder information
 
 ## Crypto Demo Pricing
 * Cryptocurrency data demo. File Ethereum classic / USD price data demo.
@@ -18,22 +17,21 @@
 * Content related to docker code projects.
 ---
 
-## Geant4_Ejemplos_ESP <Repository Name>
+## Geant4 Ejemplos ESP <Repository Name>
 
-## Licencia
+### Licencia
 ![Licencia Apache, versión 2.0](https://img.shields.io/hexpm/l/plug?color=yellow&label=License&style=flat-square)
     
-## Acerca de <Sinopsis>
+### Acerca de <Sinopsis>
 * Ejercicio de los ejemplos básicos de Geant4 con comentarios en español <Resumen>
 * Estado del proyecto: ![Estado](https://img.shields.io/badge/Estado-Informacional-orange) <Status>
 
-
-## Esquema de carpetas del repositorio
+### Esquema de carpetas del repositorio
 1. src(source) -> es la carpeta que contiene los archivos de las funciones del código fuente, *.cc / *.cpp.
 2. include -> es la carpeta que contiene los archivos de encabezado del código fuente, *.hh.
 3. build -> es la carpeta donde se contruye el ejecutable de la simulación de Geant4, con el código fuente(main).
 
-## Esquema de archivos contenidos 
+### Esquema de archivos contenidos 
 Cada ejemplo viene con una serie de archivos. 
 * README; en .txt u otro formato; es el archivo donde viene la descripción de cada ejemplo y sus caraterísticas. Explicando, cada clase y su función y la funcionalidad básica de ejecución de la simulación.
 * HISTORY; contiene la información cronológica de los autores y contribuyentes al desarrollo del ejemplo
@@ -42,7 +40,6 @@ Cada ejemplo viene con una serie de archivos.
 * La terminación *.in, son los comandos de ejemplo a ingresar en la terminal de eventos dentro de la simulación de Geant4.  
 * Los de terminación *.out es el resultado esperado de una corrida de simulación del ejemplo siguiendo los comandos base del ejemplo.
 * Las corridas con comandos por defecto estan en run1.mac y run2.mac; dependiendo de cada ejemplo pueden variar y ser más archivos.
-
 
 ### Consideraciones
 Deppendieno del ejemplo, el main puede invocar a varios archivos macro(*.mac), como ejemplo para la visualización(ui->user interface), como se muestra en el diagrama. El cual ui-> init_vis.mac ->  vis.mac o a otro vis2.mac. 
@@ -61,10 +58,10 @@ Deppendieno del ejemplo, el main puede invocar a varios archivos macro(*.mac), c
 [//]: # (</div>)  
 
 ### Requisitos
-![Versión](https://img.shields.io/badge/C++11-Solutions-blue.svg?style=flat&logo=c%2B%2B) <Version>
+![Versión](https://img.shields.io/badge/C++11-std:c++11-blue.svg?style=flat&logo=c%2B%2B) <Version>
+
 ---
 ## Material PDF Geant4 <Repository Name>
-# Material-PDF-Geant4
 Material de Documentación para GEANT4, PDF.
 
 # Autores
@@ -72,7 +69,6 @@ Material de Documentación para GEANT4, PDF.
 * Los derechos de autor y propiedad intelectual es de las personas mismas.
 * Este reopsitorio es sólo de forma educativa.
 * No pretende la distribución ni reclamación de autoría.
-
 
 ## Métodos Numéricos expediente
 * Contiene las metodologías de métodos numéricos y proyecto de rpc.
