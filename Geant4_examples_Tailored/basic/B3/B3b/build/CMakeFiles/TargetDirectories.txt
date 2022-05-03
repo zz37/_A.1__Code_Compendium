@@ -1,0 +1,8 @@
+/Users/macosx/Desktop/Geant4-examples/basic/B3/B3b/build/CMakeFiles/install/local.dir
+/Users/macosx/Desktop/Geant4-examples/basic/B3/B3b/build/CMakeFiles/install/strip.dir
+/Users/macosx/Desktop/Geant4-examples/basic/B3/B3b/build/CMakeFiles/install.dir
+/Users/macosx/Desktop/Geant4-examples/basic/B3/B3b/build/CMakeFiles/list_install_components.dir
+/Users/macosx/Desktop/Geant4-examples/basic/B3/B3b/build/CMakeFiles/rebuild_cache.dir
+/Users/macosx/Desktop/Geant4-examples/basic/B3/B3b/build/CMakeFiles/edit_cache.dir
+/Users/macosx/Desktop/Geant4-examples/basic/B3/B3b/build/CMakeFiles/B3b.dir
+/Users/macosx/Desktop/Geant4-examples/basic/B3/B3b/build/CMakeFiles/exampleB3b.dir
