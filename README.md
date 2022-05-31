@@ -8,6 +8,9 @@
 ---
 # Index folder information
 
+## [Projects]Bioinformatics
+* Dsba protein analysis from Mathemtica Wolfram Language.
+
 ## [Projects]Crypto_Demo_Pricing
 * Cryptocurrency data demo. File Ethereum classic / USD price data demo.
 * Prices retrieved from yahoo finance website, using the API. 
