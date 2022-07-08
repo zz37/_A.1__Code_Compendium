@@ -1,9 +1,9 @@
 version: '3'
 services:
-  redis-server:
+  redis-server: # specs of 1st container
     image: 'redis'
-  node-app:
-    restart: "on-failure"
+  node-app: # speccs of 2nd container
+    restart: 'on-failure'
     build: .
     ports:
-      - '4001:8081'
+      - '8081:8081'  # dash is for an arrary

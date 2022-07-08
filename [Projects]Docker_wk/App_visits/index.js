@@ -6,8 +6,6 @@ const redis = require('redis');
 // for crashing purposes
 const process = require('process');
 
-
-
 // make a new instnace of the express app.
 const app = express();
 
@@ -15,7 +13,7 @@ const app = express();
 // instead of adding an https page, we can reference the nme of the docker container, --> a the host name.
  // 6379 --> default port number for redis
 const client = redis.createClient({
-    host: 'redis-server',
+    host: 'redis-server', // connect to the host name of redis-server container, on yml file 
     port: 6379,
 });
 
@@ -27,8 +25,9 @@ client.set('visits', 0);
  Sendinf the response who ever makes the request.
  Then make sure that it refresh the # of times the site is visited
 */
+// exti 0 exited ok, ≠ 0 something is wrong
 app.get('/', (req, res) => {
-    process.exit(1); // exti 0 exited ok, other than 0 somthing is wrong
+    //process.exit(1); 
     client.get('visits', (err, visits) =>{
         res.send('Numbre of visits ' + visits);
         client.set('visits', parseInt(visits) + 1);

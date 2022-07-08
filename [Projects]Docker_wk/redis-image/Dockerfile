@@ -1,4 +1,5 @@
-# use an existing docker image as a base
+# use an existing docker image as a base 
+# CAPITAL words are instructions telling docker server what to do
 FROM alpine
 
 # download and install a dependency

@@ -1,14 +1,19 @@
 # specify base image
 FROM node:alpine
+
+# label for metadata
+LABEL maintener = z37
+LABEL vendor = Zcompany
+LABEL random = yay
+
 # adding the directory of storage inside the container
 WORKDIR /usr/nodeApp
 
 # install a dependencies
-
 # only copy the necesary files and then everything else
 
 # the only time npm intall is going to run is when the step current step(RUN) is modified or above it
-# so here it copies only the package.json to the work dir.
+# ./package.json -> copies only the .json to the work dir in container with ./
 COPY ./package.json ./ 
 RUN npm install
 

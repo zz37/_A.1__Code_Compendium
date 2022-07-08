@@ -4,7 +4,7 @@ const app = express();
 
 // @param: req:request, res:esponse
 app.get('/', (req,res) => {
-    res.send('ASDFASDFASDFASDFASDFA , jajaj');
+    res.send('Hola , APP nodejs activa ');
 });
 
 app.listen(8080, () => {
